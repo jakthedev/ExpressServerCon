@@ -15,9 +15,10 @@ var dishRouter = require('./routes/dishRouter');
 var promotionRouter = require('./routes/promotionRouter');
 var leaderRouter = require('./routes/leaderRouter');
 var uploadRouter = require('./routes/uploadRouter');
+var favoriteRouter = require('./routes/favoriteRouter')
 
 const mongoose = require('mongoose');
-mongoose.Promise = require('bluebird');
+//mongoose.Promise = require('bluebird');
 
 const Dishes = require('./models/dishes');
 // const Leaders = require('./models/leaders');
@@ -32,7 +33,6 @@ const connect = mongoose.connect(url, {
 connect.then((db) => {
   console.log('Connected correctly to server');
 }, (err) => { console.log(err); });
-
 
 var app = express();
 
